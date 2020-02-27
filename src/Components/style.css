@@ -1,0 +1,45 @@
+.loading-overlay {
+    background-color: rgba(white, 0.5);
+}
+
+.loader-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10000;
+}
+
+.fade:not(.show) {
+    opacity: 1 !important;
+}
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+
+.modal-content {
+    top: 115px !important;
+}
+
+.modal-header .close {
+    padding: unset;
+    margin: unset;
+}
+
+.modal-header {
+    display: unset !important;
+
+}
+
+
+
+.modal-body {
+    display: flex !important;
+    align-self: center;
+}

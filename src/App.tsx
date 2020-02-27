@@ -4,10 +4,14 @@ import ImageList from './Containers/ImageList';
 import { appTitle } from './Constants';
 import "./Containers/SearchBoxStyle.css"
 function App() {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState("decent random");
 
   const onChangeHandler = (item: string) => {
-    setSearchText(item);
+    if (item.length > 0) {
+      setSearchText(item);
+    } else {
+      setSearchText("decent random");
+    }
   }
   return (
     <div className="App container-fluid">
@@ -17,13 +21,12 @@ function App() {
           className=""
           type="text"
           placeholder="Search anything"
-          value={searchText}
           onChange={(e: any) => onChangeHandler(e.target.value)}
         />
       </div>
       <div className="container">
         <div className="row">
-          <ImageList text={searchText}/>
+          <ImageList text={searchText} />
         </div>
       </div>
     </div>
